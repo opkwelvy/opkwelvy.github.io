@@ -1,0 +1,61 @@
+
+.introducao{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 100px;
+  align-items: center;
+}
+.introducao h1{
+  font-size: 4.5rem;
+  line-height: 1.125;
+  margin-bottom: 30px;
+  position: relative; /*Colocar position: Relative para funcionar o absolute na tag filho*/
+}
+.introducao h1::before{
+  content: "";
+  display: block;
+  width: 130px;
+  height: 100px;
+  background: url('../imagens/Group2.svg') no-repeat center;
+  position: absolute; /*é necessário por a meta "pai" como position: RELATIVE" */
+  top: -15px; /*Colocar a figura na altura correta*/
+  left: -40px; /*Colocar a figura na posição horizontal correta*/
+  z-index: -1; /*Colocar a figura atrás das letras*/
+}
+.introducao p{
+  font-size: 1.5rem;
+  color: #525252;
+}
+@media (max-width: 1050px){
+  .introducao h1{
+    font-size: 3rem;
+  }
+}
+@media (max-width: 800px){
+  .introducao {
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+  }
+  .introducao h1{
+    font-size: 2.5rem;
+  }
+  .introducao p{
+    font-size: 1.125rem;
+  }
+  .introducao h1::before{
+    width: 50px;
+    height: 30px;
+  }
+}
+@media (max-width: 450px){
+  .introducao img{
+    display: none;
+  }
+  .introducao{
+    grid-template-columns: 1fr;
+  ;
+  }
+}
