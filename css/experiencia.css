@@ -1,4 +1,4 @@
-.experiencia{
+.experiencia {
   max-width: 1200px;
   padding: 40px 20px;
   margin: 0 auto;
@@ -6,96 +6,98 @@
   grid-template-columns: 1fr 2fr;
   gap: 100px;
 }
-.experiencia .subtitulo{
-  color: #E0E0E0;
+.experiencia .subtitulo {
+  color: #e0e0e0;
 }
-.experiencia-texto{
+.experiencia-texto {
   margin-bottom: 60px;
   font-size: 1.5rem;
   line-height: 1.33;
   max-width: 40ch;
   color: #525252;
-
 }
-.experiencia-texto strong{
+.experiencia-texto strong {
   color: #141414;
 }
-.empresa{
+.empresa {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 10px 20px;
   margin-bottom: 20px;
   padding: 20px;
-  background-color: #E0E0E0;
+  background-color: #e0e0e0;
   border-radius: 4px;
   position: relative;
+  transition: 0.3s ease-in-out;
 }
-.empresa-ano{
+.empresa:hover {
+  transform: scale(1.1);
+}
+.empresa-ano {
   position: absolute;
-  top: 18px;
-  left: -100px;
+  top: 20px;
+  left: -110px;
   color: #525252;
-  font-size: 0.875rem;
+  font-size: 1rem;
   text-align: end;
-  width: 80px; /*para poder alinhar o texto quando o position é 
+  width: 90px; /*para poder alinhar o texto quando o position é 
   absolute, aumente o tamanho do conteúdo para ter mais "espaço"*/
 }
-.empresa::before{
-  content: "";
+.empresa::before {
+  content: '';
   display: block;
   width: 4px;
   height: 20px;
-  background: linear-gradient(#53CAAE, #209C7E);
+  background: linear-gradient(#53caae, #209c7e);
   position: absolute;
   top: 20px;
-  left: -4px
+  left: -4px;
 }
-.empresa-titulo{
+.empresa-titulo {
   font-size: 1.125rem;
   line-height: 1.1;
   font-weight: bold;
 }
-.empresa li{
+.empresa li {
   list-style: none;
 }
-.empresa-texto{
-  font-size: 0.875rem ;
+.empresa-texto {
+  font-size: 0.875rem;
   line-height: 1.4;
   color: #525252;
 }
-.empresa-habilidades{
+.empresa-habilidades {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
   align-content: start;
-  
 }
-.empresa-habilidades li{
+.empresa-habilidades li {
   font-size: 0.875rem;
   padding: 5px 10px;
   background-color: #ffffff;
   border-radius: 4px;
   line-height: 1.4;
 }
-@media (max-width:800px){
-  .experiencia{
+@media (max-width: 800px) {
+  .experiencia {
     grid-template-columns: 1fr;
     gap: 40px;
   }
-  .experiencia .subtitulo{
+  .experiencia .subtitulo {
     color: #141414;
   }
-  .experiencia-texto{
+  .experiencia-texto {
     font-size: 1.25rem;
   }
-  .empresa-ano{
+  .empresa-ano {
     position: initial;
     order: 1;
     width: initial;
   }
 }
-@media (max-width:400px){
-  .empresa{
+@media (max-width: 400px) {
+  .empresa {
     grid-template-columns: 1fr;
   }
 }

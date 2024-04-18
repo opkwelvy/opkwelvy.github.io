@@ -1,0 +1,96 @@
+.projetos {
+  background: #e1e1e1;
+  color: #141414;
+}
+.projetos-container {
+  max-width: 1200px;
+  padding: 120px 20px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 100px;
+  position: relative;
+}
+.projetos .subtitulo {
+  color: #c1c1c1;
+  max-width: 4ch;
+  text-align: right;
+}
+.projetos-lista {
+  display: grid;
+  grid: 1/1;
+}
+.projeto {
+  visibility: hidden;
+  opacity: 0;
+  grid-area: 1/1;
+  transition: 0.3s ease-in-out;
+}
+.projeto.active {
+  visibility: visible;
+  opacity: 1;
+}
+.projetos-container div {
+  display: grid;
+}
+.slide-control {
+  grid-area: 1/1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  position: relative;
+}
+.slide-control button {
+  opacity: 0;
+  appearance: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+#slide-thumb {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  pointer-events: none;
+}
+#slide-thumb > span {
+  flex: 1;
+  display: block;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.2);
+  margin: 5px;
+  border-radius: 4px;
+  overflow: hidden;
+  isolation: isolate;
+}
+#slide-thumb .thumb-item.active {
+  display: block;
+  height: inherit;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 4px;
+  transform: translateX(-100%);
+  animation: thumb forwards linear running;
+}
+#slide-thumb .thumb-item.paused {
+  animation-play-state: paused;
+}
+@keyframes thumb {
+  to {
+    transform: initial;
+  }
+}
+.github a {
+  position: relative;
+}
+.github a:visited {
+  text-decoration: none;
+  color: #444;
+}
+.github a::after {
+  content: ' ';
+  display: block;
+  width: 21px;
+  height: 18px;
+  position: absolute;
+  top: 1px;
+  left: -37px;
+  background: url('../imagens/github-142-svgrepo-com.svg') no-repeat center
+    center;
+}
