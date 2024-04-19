@@ -165,3 +165,22 @@ const controls = document.getElementById('slide-control');
 if (container && elements && controls && elements.length) {
   new Slide(container, Array.from(elements), controls, 3000);
 }
+
+const devButton = document.querySelector('.active-dev');
+const designButton = document.querySelector('.active-design');
+const devTitle = document.querySelector('.desenvolvimento');
+const designTitle = document.querySelector('.design');
+const projectContainer = document.querySelector('.projetos');
+
+devButton.addEventListener('click', () => {
+  projectContainer.classList.add('dev');
+  devTitle.classList.add('active');
+  projectContainer.classList.remove('design');
+  designTitle.classList.remove('active');
+});
+designButton.addEventListener('click', () => {
+  projectContainer.classList.add('design');
+  designTitle.classList.add('active');
+  projectContainer.classList.remove('dev');
+  devTitle.classList.remove('active');
+});

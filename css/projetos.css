@@ -1,6 +1,12 @@
 .projetos {
-  background: #e1e1e1;
   color: #141414;
+  transition: 0.3s ease-in-out;
+}
+.projetos.dev {
+  background-color: #e2ecea;
+}
+.projetos.design {
+  background: #ece8f0;
 }
 .projetos-container {
   max-width: 1200px;
@@ -12,9 +18,15 @@
   position: relative;
 }
 .projetos .subtitulo {
-  color: #c1c1c1;
   max-width: 4ch;
   text-align: right;
+  transition: 0.5s ease-in-out;
+}
+.projetos.design .subtitulo {
+  color: #ddc4f6;
+}
+.projetos.dev .subtitulo {
+  color: #bfe2da;
 }
 .projetos-lista {
   display: grid;
@@ -29,9 +41,6 @@
 .projeto.active {
   visibility: visible;
   opacity: 1;
-}
-.projetos-container div {
-  display: grid;
 }
 .slide-control {
   grid-area: 1/1;
@@ -93,4 +102,35 @@
   left: -37px;
   background: url('../imagens/github-142-svgrepo-com.svg') no-repeat center
     center;
+}
+.sub .desenvolvimento {
+  color: #30ae90;
+  font-size: 2rem;
+  transform: translateX(-30px);
+  transition: 0.3s ease-in-out;
+  animation: enter 0.8s forwards 0.3s;
+  opacity: 0;
+  display: none;
+}
+.sub .desenvolvimento.active {
+  display: block;
+}
+
+.sub .design {
+  color: #7a45c7;
+  font-size: 2rem;
+  transform: translateX(-30px);
+  transition: 0.3s ease-in-out;
+  animation: enter 0.8s forwards 0.3s;
+  opacity: 0;
+  display: none;
+}
+.sub .design.active {
+  display: block;
+}
+@keyframes enter {
+  to {
+    transform: initial;
+    opacity: 1;
+  }
 }
