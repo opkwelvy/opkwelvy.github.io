@@ -43,6 +43,10 @@
   border-radius: 4px;
   display: flex;
   flex-direction: column;
+  transition: 0.3s ease-in-out;
+}
+.faculdade:hover {
+  transform: scale(1.05);
 }
 .faculdade-grau {
   font-size: 0.875rem;

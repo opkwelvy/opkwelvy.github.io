@@ -10,6 +10,7 @@
   content: '';
   display: block;
   background-color: #209c7e;
+  border-radius: 4px;
   width: 0%;
   height: 2px;
   bottom: 2px;
