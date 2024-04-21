@@ -29,18 +29,182 @@
   color: #bfe2da;
 }
 .projetos-lista {
-  display: grid;
+  display: none;
   grid: 1/1;
+}
+.projetos-lista.dev.active {
+  display: grid;
+}
+.projetos-lista.design.active {
+  display: grid;
+}
+.projetos-header {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.projetos-header .active-dev {
+  padding: 10px 12px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  color: #28a386;
+  font-size: 1.4rem;
+  font-weight: 500;
+  display: inline-block;
+  background-color: #c8e1dc;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+.projetos-header .active-dev:hover {
+  border: 1px solid #53caae;
+}
+.projetos-header .active-design {
+  padding: 10px 12px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  color: #7a45c7;
+  font-size: 1.4rem;
+  font-weight: 500;
+  display: inline-block;
+  background-color: #d4cade;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+.projetos-header .active-design:hover {
+  border: 1px solid #9060d6;
+}
+
+.projetos-header .active-dev.active {
+  border: 2px solid #28a386;
+  transform: scale(1.1);
+}
+.projetos-header .active-design.active {
+  border: 2px solid #7a45c7;
+  transform: scale(1.1);
+}
+.sub .dev {
+  color: #30ae90;
+  font-size: 2rem;
+  transform: translateX(-30px);
+  transition: 0.3s ease-in-out;
+  animation: enter 0.8s forwards 0.3s;
+  opacity: 0;
+  display: none;
+}
+.sub .dev.active {
+  display: block;
+}
+
+.sub .design {
+  color: #7a45c7;
+  font-size: 2rem;
+  transform: translateX(-30px);
+  transition: 0.3s ease-in-out;
+  animation: exit 0.8s forwards 0.3s;
+  opacity: 0;
+  display: none;
+}
+.sub .design.active {
+  display: block;
+  animation: enter 0.8s forwards 0.3s;
+}
+@keyframes enter {
+  to {
+    transform: initial;
+    opacity: 1;
+  }
+}
+@keyframes exit {
+  to {
+    transform: translateX(30px);
+    opacity: 1;
+  }
 }
 .projeto {
   visibility: hidden;
   opacity: 0;
   grid-area: 1/1;
   transition: 0.3s ease-in-out;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  transform: translateX(-60px);
 }
 .projeto.active {
   visibility: visible;
   opacity: 1;
+  transform: initial;
+}
+.projeto.disabled {
+  transform: translateX(60px);
+}
+.projeto .menu {
+  display: flex;
+  justify-content: space-around;
+  margin: 25px 0;
+}
+.projeto img {
+  border-radius: 4px;
+}
+.projeto .menu button {
+  border: none;
+  background-color: #bfe2da;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+.projeto .menu button:hover {
+  background-color: #a0c7be;
+}
+.projeto .menu img {
+  width: 30px;
+}
+.projeto .menu .play,
+.projeto .menu .pause {
+  display: block;
+}
+.projeto .menu .play.played {
+  display: none;
+}
+.projeto .menu .pause.paused {
+  display: none;
+}
+.projeto .menu .next img {
+  transform: rotate(180deg);
+}
+.projeto .description {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.description h3 {
+  font-size: 2rem;
+  color: #333333;
+  font-weight: 600;
+}
+.description p {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+.description ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+.description ul li {
+  display: inline-block;
+  color: #e7fdfa;
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 10px 15px;
+  background-color: #112623;
+  border-radius: 4px;
+  transition: 0.3s ease-in-out;
+}
+.description ul li:hover {
+  transform: scale(1.2);
 }
 .slide-control {
   grid-area: 1/1;
@@ -85,6 +249,9 @@
     transform: initial;
   }
 }
+.github {
+  margin-top: 20px;
+}
 .github a {
   position: relative;
 }
@@ -92,45 +259,15 @@
   text-decoration: none;
   color: #444;
 }
-.github a::after {
+.github a:after {
   content: ' ';
   display: block;
   width: 21px;
   height: 18px;
   position: absolute;
   top: 1px;
+  z-index: 2;
   left: -37px;
   background: url('../imagens/github-142-svgrepo-com.svg') no-repeat center
     center;
-}
-.sub .desenvolvimento {
-  color: #30ae90;
-  font-size: 2rem;
-  transform: translateX(-30px);
-  transition: 0.3s ease-in-out;
-  animation: enter 0.8s forwards 0.3s;
-  opacity: 0;
-  display: none;
-}
-.sub .desenvolvimento.active {
-  display: block;
-}
-
-.sub .design {
-  color: #7a45c7;
-  font-size: 2rem;
-  transform: translateX(-30px);
-  transition: 0.3s ease-in-out;
-  animation: enter 0.8s forwards 0.3s;
-  opacity: 0;
-  display: none;
-}
-.sub .design.active {
-  display: block;
-}
-@keyframes enter {
-  to {
-    transform: initial;
-    opacity: 1;
-  }
 }
