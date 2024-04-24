@@ -45,6 +45,7 @@
   grid-area: 1/1;
   transition: 0.3s ease-in-out;
   border-radius: 16px;
+  z-index: 1;
 }
 .amigos-do-bem-project-slide img.active {
   visibility: visible;
@@ -58,9 +59,9 @@
   width: 130px;
   height: 100px;
   background: url('../imagens/Group2-yellow.svg') no-repeat center;
-  top: -15px;
-  left: -40px;
-  z-index: -1;
+  bottom: -35px;
+  right: -2%;
+  z-index: 0;
 }
 .amigos-do-bem-description {
   display: flex;
