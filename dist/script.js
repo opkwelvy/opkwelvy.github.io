@@ -172,6 +172,14 @@ const elementsDesignArray = Array.from(elementsDesign.children);
 if (containerDesign && elementsDesignArray && elementsDesignArray.length) {
   new Slide(containerDesign, elementsDesignArray, 5000);
 }
+
+const abdContainer = document.querySelector('.amigos-do-bem-project-slide');
+const adbChildren = Array.from(abdContainer.children);
+
+if (abdContainer && adbChildren) {
+  console.log('test');
+  new Slide(abdContainer, adbChildren, 5000);
+}
 const devButton = document.querySelector('.active-dev');
 const designButton = document.querySelector('.active-design');
 const devTitle = document.querySelector('.sub .dev');

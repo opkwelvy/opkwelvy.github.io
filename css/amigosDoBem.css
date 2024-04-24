@@ -1,0 +1,91 @@
+.amigos-do-bem {
+  background: #141414;
+  color: #fff;
+}
+.amigos-do-bem-container {
+  max-width: 1200px;
+  padding: 50px 20px;
+  margin: 0 auto;
+  position: relative;
+}
+.amigos-do-bem-header {
+  display: flex;
+  justify-content: center;
+}
+.amigos-do-bem-header h2 {
+  font-weight: 600;
+  font-size: 2rem;
+  position: relative;
+  display: flex;
+}
+.amigos-do-bem-header h2::after {
+  content: '';
+  width: 30%;
+  height: 2px;
+  bottom: -10%;
+  right: 33%;
+  position: absolute;
+  background-color: #e9c41f;
+  border-radius: 2px;
+}
+.amigos-do-bem-project {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 50px;
+}
+.amigos-do-bem-project-slide {
+  display: grid;
+  justify-content: center;
+  position: relative;
+}
+.amigos-do-bem-project-slide img {
+  visibility: hidden;
+  width: 350px;
+  opacity: 0;
+  grid-area: 1/1;
+  transition: 0.3s ease-in-out;
+  border-radius: 16px;
+}
+.amigos-do-bem-project-slide img.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.amigos-do-bem-project-slide::after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 130px;
+  height: 100px;
+  background: url('../imagens/Group2-yellow.svg') no-repeat center;
+  top: -15px;
+  left: -40px;
+  z-index: -1;
+}
+.amigos-do-bem-description {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.amigos-do-bem-description h3 {
+  font-size: 1.7rem;
+  font-weight: 500;
+}
+.amigos-do-bem-description p {
+  font-size: 1.3rem;
+}
+.amigos-do-bem-description ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.amigos-do-bem-description ul li {
+  padding: 10px 15px;
+  background-color: #776203;
+  border-radius: 4px;
+  transition: 0.3s ease-in-out;
+}
+.amigos-do-bem-description ul li:hover {
+  transform: scale(1.2);
+}
