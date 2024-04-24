@@ -5,35 +5,4 @@
 @import '/css/projetos.css';
 @import '/css/formacao.css';
 @import '/css/footer.css';
-
-html {
-  scroll-behavior: smooth;
-}
-.up {
-  position: fixed;
-  bottom: 4%;
-  right: 2%;
-  padding: 5px;
-  border-radius: 50%;
-  border: none;
-  background-color: #53caae;
-  font-size: 1.5rem;
-  visibility: hidden;
-  opacity: 0;
-  transition: 0.3s ease-in-out;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.visible {
-  visibility: visible;
-  opacity: 1;
-}
-.up:hover {
-  background-color: #059673;
-  transform: scale(1.3);
-}
-.up img {
-  width: 50px;
-  transform: rotate(270deg);
-}
+@import './amigosDoBem.css';

@@ -147,15 +147,25 @@
 .projeto img {
   border-radius: 4px;
 }
-.projeto .menu button {
+
+.projetos-lista .projeto .menu button {
   border: none;
   background-color: #bfe2da;
   border-radius: 4px;
   cursor: pointer;
   transition: 0.3s ease-in-out;
 }
-.projeto .menu button:hover {
+.projetos-lista.dev .projeto .menu button {
+  background-color: #bfe2da;
+}
+.projetos-lista.dev .projeto .menu button:hover {
   background-color: #a0c7be;
+}
+.projetos-lista.design .projeto .menu button {
+  background-color: #ddc4f6;
+}
+.projetos-lista.design .projeto .menu button:hover {
+  background-color: #bb9cd9;
 }
 .projeto .menu img {
   width: 30px;
@@ -176,12 +186,16 @@
 .projeto .description {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 15px;
 }
 .description h3 {
   font-size: 2rem;
   color: #333333;
   font-weight: 600;
+}
+.description h3 span {
+  font-size: 1.2rem;
+  color: #444;
 }
 .description p {
   font-size: 1.4rem;
@@ -199,12 +213,38 @@
   font-size: 1.1rem;
   font-weight: 500;
   padding: 10px 15px;
-  background-color: #112623;
   border-radius: 4px;
   transition: 0.3s ease-in-out;
 }
 .description ul li:hover {
   transform: scale(1.2);
+}
+.projetos-lista.dev .description ul li {
+  background-color: #112623;
+}
+.projetos-lista.design .description ul li {
+  background-color: #55239c;
+}
+.description p:last-child {
+  margin-top: 15px;
+}
+.description a {
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  font-weight: 600;
+}
+.projetos-lista.dev .description a {
+  color: #9060d6;
+}
+.projetos-lista.dev .description a:hover {
+  color: #7a45c7;
+}
+.projetos-lista.design .description a {
+  color: #30ae90;
+}
+.projetos-lista.design .description a:hover {
+  color: #28a386;
 }
 .slide-control {
   grid-area: 1/1;
