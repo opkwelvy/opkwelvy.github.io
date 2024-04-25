@@ -41,7 +41,7 @@ img {
 
 .up {
   position: fixed;
-  bottom: 4%;
+  bottom: 2%;
   right: 2%;
   padding: 5px;
   border-radius: 50%;
@@ -54,6 +54,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 5;
 }
 .visible {
   visibility: visible;
@@ -66,4 +67,10 @@ img {
 .up img {
   width: 50px;
   transform: rotate(270deg);
+}
+
+@media (max-width: 800px) {
+  .up {
+    right: 8%;
+  }
 }

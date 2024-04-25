@@ -40,7 +40,7 @@
 }
 .amigos-do-bem-project-slide img {
   visibility: hidden;
-  width: 350px;
+  max-width: 350px;
   opacity: 0;
   grid-area: 1/1;
   transition: 0.3s ease-in-out;
@@ -60,7 +60,7 @@
   height: 100px;
   background: url('../imagens/Group2-yellow.svg') no-repeat center;
   bottom: -35px;
-  right: -2%;
+  right: 2px;
   z-index: 0;
 }
 .amigos-do-bem-description {
@@ -69,6 +69,7 @@
   gap: 20px;
 }
 .amigos-do-bem-description h3 {
+  margin-top: 4rem;
   font-size: 1.7rem;
   font-weight: 500;
 }
@@ -89,4 +90,24 @@
 }
 .amigos-do-bem-description ul li:hover {
   transform: scale(1.2);
+}
+@media (max-width: 800px) {
+  .amigos-do-bem-container {
+    padding: 40px 20px;
+  }
+  .amigos-do-bem-project {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .amigos-do-bem-project-slide img {
+    max-width: 250px;
+  }
+  .amigos-do-bem-project-slide img.active {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .amigos-do-bem-project-slide::after {
+    display: none;
+  }
 }
